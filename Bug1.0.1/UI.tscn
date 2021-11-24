@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI.gd" type="Script" id=1]
+[ext_resource path="res://spritesheet_players.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 284, -2, 39, 48 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 205, -2, 42, 50 )
+
+[node name="UI" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreText" type="Label" parent="."]
+margin_left = 70.0
+margin_right = 110.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreText2" type="Label" parent="."]
+margin_left = 181.0
+margin_right = 221.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 56, 6 )
+scale = Vector2( 0.5, 0.5 )
+texture = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 165, 7 )
+scale = Vector2( 0.5, 0.5 )
+texture = SubResource( 2 )
+
+[node name="Message" type="Label" parent="."]
+margin_left = 398.0
+margin_top = -296.0
+margin_right = 454.0
+margin_bottom = -282.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,115 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://tilesheet_complete.png" type="Texture" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sugar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Mob.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MainScene.gd" type="Script" id=7]
+[ext_resource path="res://Timer.gd" type="Script" id=8]
+
+[sub_resource type="TileSet" id=1]
+0/name = "tilesheet_complete.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 1408, 768 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 64, 64 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 456.078, 21.743 )
+
+[node name="MainScene" type="StaticBody2D"]
+script = ExtResource( 7 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+collision_layer = 0
+format = 1
+tile_data = PoolIntArray( 0, 0, 655361, 1, 0, 589826, 2, 0, 589826, 3, 0, 589826, 4, 0, 589826, 5, 0, 589826, 6, 0, 589826, 7, 0, 589826, 8, 0, 589826, 9, 0, 589826, 10, 0, 589826, 11, 0, 589826, 12, 0, 589826, 13, 0, 589826, 14, 0, 589826, 15, -1610612736, 655361, 65536, -1073741824, 589826, 65537, 0, 589824, 65538, 0, 589824, 65539, 0, 589824, 65540, 0, 589824, 65541, 0, 589824, 65542, 0, 589824, 65543, 0, 589824, 65544, 0, 589824, 65545, 0, 589824, 65546, 0, 589824, 65547, 0, 589824, 65548, 0, 589824, 65549, 0, 589824, 65550, 0, 589824, 65551, -1610612736, 589826, 131072, -1073741824, 589826, 131073, 0, 589824, 131074, 0, 589824, 131075, 0, 589824, 131076, 0, 589824, 131077, 0, 589824, 131078, 0, 589824, 131079, 0, 589824, 131080, 0, 589824, 131081, 0, 589824, 131082, 0, 589824, 131083, 0, 589824, 131084, 0, 589824, 131085, 0, 589824, 131086, 0, 589824, 131087, -1610612736, 589826, 196608, -1073741824, 589826, 196609, 0, 589824, 196610, 0, 589824, 196611, 0, 589824, 196612, 0, 589824, 196613, 0, 589824, 196614, 0, 589824, 196615, 0, 589824, 196616, 0, 589824, 196617, 0, 589824, 196618, 0, 589824, 196619, 0, 589824, 196620, 0, 589824, 196621, 0, 589824, 196622, 0, 589824, 196623, -1610612736, 589826, 262144, -1073741824, 589826, 262145, 0, 589824, 262146, 0, 589824, 262147, 0, 589824, 262148, 0, 589824, 262149, 0, 589824, 262150, 0, 589824, 262151, 0, 589824, 262152, 0, 589824, 262153, 0, 589824, 262154, 0, 589824, 262155, 0, 589824, 262156, 0, 589824, 262157, 0, 589824, 262158, 0, 589824, 262159, -1610612736, 589826, 327680, -1073741824, 589826, 327681, 0, 589824, 327682, 0, 589824, 327683, 0, 589824, 327684, 0, 589824, 327685, 0, 589824, 327686, 0, 589824, 327687, 0, 589824, 327688, 0, 589824, 327689, 0, 589824, 327690, 0, 589824, 327691, 0, 589824, 327692, 0, 589824, 327693, 0, 589824, 327694, 0, 589824, 327695, -1610612736, 589826, 393216, -1073741824, 589826, 393217, 0, 589824, 393218, 0, 589824, 393219, 0, 589824, 393220, 0, 589824, 393221, 0, 589824, 393222, 0, 589824, 393223, 0, 589824, 393224, 0, 589824, 393225, 0, 589824, 393226, 0, 589824, 393227, 0, 589824, 393228, 0, 589824, 393229, 0, 589824, 393230, 0, 589824, 393231, -1610612736, 589826, 458752, -1073741824, 589826, 458753, 0, 589824, 458754, 0, 589824, 458755, 0, 589824, 458756, 0, 589824, 458757, 0, 589824, 458758, 0, 589824, 458759, 0, 589824, 458760, 0, 589824, 458761, 0, 589824, 458762, 0, 589824, 458763, 0, 589824, 458764, 0, 589824, 458765, 0, 589824, 458766, 0, 589824, 458767, -1610612736, 589826, 524288, -1073741824, 655361, 524289, 1610612736, 589826, 524290, 1610612736, 589826, 524291, 1610612736, 589826, 524292, 1610612736, 589826, 524293, 1610612736, 589826, 524294, 1610612736, 589826, 524295, 1610612736, 589826, 524296, 1610612736, 589826, 524297, 1610612736, 589826, 524298, 1610612736, 589826, 524299, 1610612736, 589826, 524300, 1610612736, 589826, 524301, 1610612736, 589826, 524302, 1610612736, 589826, 524303, 1610612736, 655361 )
+
+[node name="UpperBorder" type="CollisionShape2D" parent="."]
+position = Vector2( 512, 31.75 )
+shape = SubResource( 2 )
+
+[node name="LowerBorder" type="CollisionShape2D" parent="."]
+position = Vector2( 512, 542 )
+shape = SubResource( 2 )
+
+[node name="LeftBorder" type="CollisionShape2D" parent="."]
+position = Vector2( 30.9434, 284.226 )
+rotation = -1.55957
+scale = Vector2( 0.619776, 1.58729 )
+shape = SubResource( 2 )
+
+[node name="RightBorder" type="CollisionShape2D" parent="."]
+position = Vector2( 985, 286 )
+rotation = -1.55957
+scale = Vector2( 0.619776, 1.58729 )
+shape = SubResource( 2 )
+
+[node name="UI" parent="." instance=ExtResource( 4 )]
+margin_left = 62.0
+margin_top = 580.0
+margin_right = 950.0
+margin_bottom = 596.0
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 546, 365 )
+z_index = 10
+
+[node name="Mob" parent="." instance=ExtResource( 6 )]
+position = Vector2( 331, 151 )
+
+[node name="Mob2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 744, 352 )
+
+[node name="Mob3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 240, 448 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+script = ExtResource( 8 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 729, 180 )
+
+[node name="Sugar" parent="." instance=ExtResource( 3 )]
+position = Vector2( 144, 453 )
+
+[node name="Sugar2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 415, 466 )
+
+[node name="Sugar3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 721, 429 )
+
+[node name="Sugar4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 191, 183 )
+
+[node name="Sugar5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 416, 304 )
+
+[node name="Sugar6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 168, 224 )
+
+[node name="Sugar7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 544, 112 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
